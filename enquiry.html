@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Make an appointment enquiry with Alex the Barber.">
+
+    <title>Alex the Barber | Enquiry</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ======= HEADER =========-->
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="logo-link">
+
+                <img src="images/logo.png"
+                     alt="Alex the Barber logo">
+
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="enquiry.html" class="active">Enquiry</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========== MAIN ===============-->
+    <main>
+
+        <!-- Page Hero -->
+        <section class="page-hero">
+
+            <div>
+
+                <span class="eyebrow">
+                    BOOK YOUR VISIT
+                </span>
+
+                <h1>Make an Enquiry</h1>
+
+                <p>
+                    Tell us what service you are interested in
+                    and we will help arrange your appointment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Enquiry Area -->
+        <section class="enquiry-section section-container">
+
+            <div class="enquiry-grid">
+
+                <!-- Form -->
+                <div class="form-container">
+
+                    <span class="section-label">
+                        APPOINTMENT ENQUIRY
+                    </span>
+
+                    <h2>
+                        Tell Us What You Need
+                    </h2>
+
+                    <p>
+                        Complete the form below with your details
+                        and preferred service.
+                    </p>
+
+
+                    <form class="enquiry-form">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter your phone number"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="service">
+                                    Preferred Service
+                                </label>
+
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select a service
+                                    </option>
+
+                                    <option value="classic">
+                                        Classic Haircut - R150
+                                    </option>
+
+                                    <option value="fade">
+                                        Fade Haircut - R180
+                                    </option>
+
+                                    <option value="kids">
+                                        Kids Haircut - R120
+                                    </option>
+
+                                    <option value="beard">
+                                        Beard Trim - R100
+                                    </option>
+
+                                    <option value="styling">
+                                        Hair Styling - R220
+                                    </option>
+
+                                    <option value="shaving">
+                                        Professional Shave - R80
+                                    </option>
+
+                                    <option value="buzz">
+                                        Buzz Cut - R100
+                                    </option>
+
+                                    <option value="burst">
+                                        Burst Fade - R200
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="date">
+                                    Preferred Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    name="date"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="time">
+                                    Preferred Time
+                                </label>
+
+                                <select
+                                    id="time"
+                                    name="time"
+                                >
+
+                                    <option value="">
+                                        Select a time
+                                    </option>
+
+                                    <option value="09:00">
+                                        09:00
+                                    </option>
+
+                                    <option value="10:00">
+                                        10:00
+                                    </option>
+
+                                    <option value="11:00">
+                                        11:00
+                                    </option>
+
+                                    <option value="12:00">
+                                        12:00
+                                    </option>
+
+                                    <option value="13:00">
+                                        13:00
+                                    </option>
+
+                                    <option value="14:00">
+                                        14:00
+                                    </option>
+
+                                    <option value="15:00">
+                                        15:00
+                                    </option>
+
+                                    <option value="16:00">
+                                        16:00
+                                    </option>
+
+                                    <option value="17:00">
+                                        17:00
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Additional Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Tell us about the style you are looking for..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary form-button">
+                            Submit Enquiry
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Information -->
+                <aside class="enquiry-info">
+
+                    <div class="info-card">
+
+                        <span class="info-number">
+                            01
+                        </span>
+
+                        <h3>Choose Your Service</h3>
+
+                        <p>
+                            Select the grooming service you would
+                            like from the available options.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-number">
+                            02
+                        </span>
+
+                        <h3>Select Your Date</h3>
+
+                        <p>
+                            Tell us your preferred date and time
+                            for your appointment.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-number">
+                            03
+                        </span>
+
+                        <h3>We'll Get Back to You</h3>
+
+                        <p>
+                            We will review your enquiry and contact
+                            you using the details you provide.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-contact">
+
+                        <h3>Need Help?</h3>
+
+                        <p>
+                            Contact us directly if you have questions
+                            about our services.
+                        </p>
+
+                        <a href="contact.html">
+                            Contact Us →
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img src="images/logo.png"
+                     alt="Alex the Barber logo">
+
+                <p>
+                    Professional grooming. Modern style.
+                    Confident you.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>Email: info@alexthebarber.com</p>
+                <p>Phone: +27 12 345 6789</p>
+                <p>Johannesburg, South Africa</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Alex the Barber. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
