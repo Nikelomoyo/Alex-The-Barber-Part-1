@@ -1,0 +1,5 @@
+# Replace YOUR-SITE-NAME with the actual Netlify/GitHub Pages hostname after deployment.
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-SITE-NAME.netlify.app/sitemap.xml

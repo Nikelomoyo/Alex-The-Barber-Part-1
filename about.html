@@ -6,16 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Learn about Alex the Barber, our story, values and commitment to professional grooming.">
+    <meta name="description" content="Meet Alex the Barber and learn about our approach to professional haircuts, modern styles, traditional grooming and customer service in Johannesburg.">
 
-    <title>Alex the Barber | About Us</title>
+    <title>About Alex the Barber | Our Story and Grooming Values</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+
+    <meta name="keywords" content="about Alex the Barber, professional barber Johannesburg, men's grooming">
+    <meta name="author" content="Alex the Barber">
+    <meta name="theme-color" content="#111111">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Alex the Barber | Our Story and Grooming Values">
+    <meta property="og:description" content="Meet Alex the Barber and learn about our approach to professional haircuts, modern styles, traditional grooming and customer service in Johannesburg.">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="robots" content="index, follow">
 
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- =========== HEADER ======-->
     <header class="site-header">
@@ -29,10 +39,14 @@
 
             </a>
 
-            <div class="nav-links">
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="primary-navigation">
 
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">About Us</a>
+                <a href="about.html" class="active" aria-current="page">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="enquiry.html">Enquiry</a>
@@ -46,7 +60,7 @@
 
 
     <!-- ========= MAIN =======-->
-    <main>
+    <main id="main-content">
 
         <!-- Page Hero -->
         <section class="page-hero">
@@ -252,6 +266,34 @@
 
 
         <!-- CTA -->
+        
+
+        <section class="faq-section section-container">
+            <div class="section-heading">
+                <span class="section-label">HELPFUL INFORMATION</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions about visiting Alex the Barber.</p>
+            </div>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <h3><button class="faq-question" type="button" aria-expanded="false">Do I need to book an appointment?</button></h3>
+                    <div class="faq-answer" hidden><p>We recommend sending an enquiry before visiting so that your preferred service and time can be discussed. An enquiry is not a confirmed booking.</p></div>
+                </article>
+                <article class="faq-item">
+                    <h3><button class="faq-question" type="button" aria-expanded="false">How much does a haircut cost?</button></h3>
+                    <div class="faq-answer" hidden><p>Prices depend on the service selected. Visit the Services page for the current example price list. Final prices should be confirmed when arranging your appointment.</p></div>
+                </article>
+                <article class="faq-item">
+                    <h3><button class="faq-question" type="button" aria-expanded="false">Do you offer children's haircuts?</button></h3>
+                    <div class="faq-answer" hidden><p>Yes. A Kids Haircut is included in the services list. Use the Enquiry page to request a preferred date and time.</p></div>
+                </article>
+                <article class="faq-item">
+                    <h3><button class="faq-question" type="button" aria-expanded="false">Can I ask for a particular hairstyle?</button></h3>
+                    <div class="faq-answer" hidden><p>Yes. Add details about your preferred style in the additional message field on the Enquiry page. You can also browse the Gallery for inspiration.</p></div>
+                </article>
+            </div>
+        </section>
+
         <section class="cta section-container">
 
             <div class="cta-content">
@@ -315,8 +357,8 @@
 
                 <h3>Contact</h3>
 
-                <p>Email: info@alexthebarber.com</p>
-                <p>Phone: +27 12 345 6789</p>
+                <p>Email: nikelomoyo@gmail.com</p>
+                <p>Phone: <a href="tel:+27604327719">+27 60 432 7719</a></p>
                 <p>Johannesburg, South Africa</p>
 
             </div>
@@ -335,7 +377,7 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
 </body>
 

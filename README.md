@@ -937,3 +937,208 @@ Mozilla Developer Network (MDN) Web Docs. (n.d.) *CSS Flexible Box Layout*. Avai
 Mozilla Developer Network (MDN) Web Docs. (n.d.) *Using media queries*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries (Accessed: 18 September 2026).
 
 Mozilla Developer Network (MDN) Web Docs. (n.d.) *HTML forms*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms (Accessed: 18 September 2026).
+
+
+---
+
+# 23. Part 3 – Enhancing Functionality and SEO
+
+Part 3 builds on the website developed in Parts 1 and 2. The existing black, grey, white and gold visual identity and six-page structure were retained while JavaScript interactions, form handling, technical SEO and deployment preparation were added.
+
+## 23.1 JavaScript functionality
+
+The external file `js/script.js` contains the website's client-side functionality.
+
+### Service search and filtering
+
+The Services page includes a search field and category filters. JavaScript listens for user input and filter-button clicks, checks each service card's text and category data attributes, and updates the DOM to show matching services. A live result count and an empty-results message help users understand the results.
+
+### Gallery lightbox
+
+Gallery images can be opened in an enlarged overlay. The lightbox includes close, previous and next controls, supports Escape and arrow keys, and returns keyboard focus to the image that opened it. Gallery images have descriptive alternative text and lazy loading.
+
+### FAQ accordion
+
+The About page includes an accordion. Selecting a question reveals its answer and updates the `aria-expanded` state. Only one answer is open at a time.
+
+### Motion and accessibility
+
+Existing CSS transitions are retained. Additional interactions use visible focus states. A `prefers-reduced-motion` media query reduces motion for visitors who have requested that preference from their operating system.
+
+## 23.2 Enquiry form
+
+The Enquiry page collects a customer's name, email address, telephone number, requested service, preferred date, preferred time and optional message.
+
+HTML constraints and JavaScript validation are used to check required fields, email format, phone number format and appointment dates. The minimum date is set to the visitor's current local date, and a past date is rejected.
+
+When valid details are submitted, JavaScript displays the selected service and an indicative price. The response clearly explains that the request is an enquiry and not a confirmed appointment. The page does not connect to a live appointment calendar or verify real-time availability.
+
+The example service prices used by the project are:
+
+| Service | Indicative price |
+| --- | ---: |
+| Classic Haircut | R150 |
+| Fade Haircut | R180 |
+| Kids Haircut | R120 |
+| Beard Trim | R100 |
+| Hair Styling | R220 |
+| Professional Shave | R80 |
+| Buzz Cut | R100 |
+| Burst Fade | R200 |
+
+These are project example prices and should be confirmed by the client before the website is used commercially.
+
+## 23.3 Contact form
+
+A separate general contact form was added to `contact.html`. It collects the visitor's name, email address, optional phone number, message category, subject and full message.
+
+JavaScript validates the information and prepares a `mailto:` email addressed to `nikelomoyo@gmail.com`. The visitor's default email application should open with the message populated. The visitor must review and send the email themselves. This method does not send an email automatically and depends on the visitor having an email application configured.
+
+The contact recipient is nikelomoyo@gmail.com, as supplied for the project. Confirm that this inbox is monitored by the business before launch. A production website should use a secure server-side form service or backend to deliver messages reliably.
+
+## 23.4 On-page SEO
+
+Unique title tags and meta descriptions were added to each of the six pages. Relevant search phrases relating to barber services, men's haircuts, fades, beard grooming and the business location at 92 De Korte Street, Braamfontein, Johannesburg are included naturally in page metadata and content.
+
+Other on-page SEO improvements include:
+
+* Semantic page structure and a clear main heading.
+* Descriptive image alternative text.
+* Descriptive page titles and meta descriptions.
+* Internal links between the six website pages.
+* Social sharing metadata (Open Graph title, description and image).
+* A mobile-friendly responsive layout.
+* Lazy loading for suitable gallery images.
+* A skip-to-content link for keyboard users.
+
+The keyword phrases are a qualitative starting point based on the services and intended local audience. They are not presented as search-volume or ranking data from a paid keyword research tool.
+
+## 23.5 Technical SEO
+
+Two technical SEO files were added:
+
+* `robots.txt` gives crawlers permission to access the public website and points to the sitemap.
+* `sitemap.xml` lists the six HTML pages.
+
+**Important deployment step:** These files currently contain the placeholder hostname `YOUR-SITE-NAME.netlify.app`. After publishing, replace the placeholder in both files with the actual Netlify site hostname, then upload the updated files. A sitemap must use the real public website URL to be useful to search engines.
+
+## 23.6 Security and performance
+
+The project includes a Netlify `_headers` file that sets basic browser security headers, including `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options` and a restrictive `Permissions-Policy`. Static image, CSS and JavaScript resources receive cache-control directives.
+
+The website uses client-side validation for usability, but client-side validation is not a security boundary. Any production form that stores or sends personal information must also validate input on the server, use HTTPS, protect against spam and avoid exposing private credentials in browser JavaScript.
+
+Images use `loading="lazy"` where appropriate. The project uses a small amount of vanilla JavaScript and does not require a large front-end framework.
+
+## 23.7 Interactive map
+
+The Contact page retains its embedded Google Maps map. The map is loaded in an iframe with a descriptive title and lazy loading. This is an embedded map rather than a custom map built with Leaflet, Mapbox or OpenLayers.
+
+## 23.8 Deployment preparation
+
+The website is a static HTML, CSS and JavaScript project and can be deployed using Netlify.
+
+Deployment steps:
+
+1. Sign in to Netlify.
+2. Choose the option to add a new site and import an existing Git repository, or manually deploy the extracted project folder.
+3. Select the GitHub repository or upload the folder containing `index.html`, the other HTML pages, `css`, `js`, `images`, `robots.txt`, `sitemap.xml` and `_headers`.
+4. Publish the site and open the generated public URL.
+5. Test every page, image, navigation link, form interaction and the map on the published URL.
+6. Replace the placeholder hostname in `robots.txt` and `sitemap.xml` with the generated site hostname and redeploy.
+7. Submit the public website URL as well as the GitHub repository URL if requested by the LMS.
+
+The website has been prepared for deployment, but a public deployment URL must only be added to this README after the site has actually been published and tested.
+
+## 23.9 Part 3 testing checklist
+
+The following checks should be completed in a browser before submission:
+
+* Open all six pages and check that navigation links work.
+* Search for a service and verify that non-matching cards are hidden.
+* Test every service filter and the no-results message.
+* Open a gallery image, use previous/next, close with the button and Escape, and test keyboard activation.
+* Expand and collapse each FAQ item using a keyboard and mouse.
+* Submit the enquiry form with missing fields, an invalid email, an invalid phone number and a past date.
+* Submit a valid enquiry and check that the correct indicative price and non-confirmation message appear.
+* Submit the contact form with invalid and valid data. Confirm that the email application opens with the recipient, subject and message populated.
+* Check that the site works at desktop, tablet and mobile widths.
+* Check the browser console for JavaScript errors and the Network panel for missing files.
+* After deployment, check `robots.txt` and `sitemap.xml` at the public site URL.
+
+Do not describe these checks as completed until they have been performed on the local and deployed website.
+
+## 23.10 Part 3 changelog
+
+### Version 3.0 – JavaScript and interactive functionality
+
+* Replaced the empty JavaScript file with organised vanilla JavaScript functions.
+* Added live service search and category filtering to the Services page.
+* Added a live count of matching services and a message when no services match.
+* Added a keyboard-accessible gallery lightbox with close, previous and next controls.
+* Added Escape and arrow-key support to the gallery lightbox.
+* Added an FAQ accordion to the About page with accessible expanded/collapsed states.
+* Added automatic minimum-date handling to the appointment enquiry form.
+* Added client-side checks for required fields, email, phone number and appointment date.
+* Added an indicative service-price response after a valid appointment enquiry.
+* Added a distinct general contact form to the Contact page.
+* Added JavaScript validation and email preparation using a `mailto:` link.
+* Added service preselection when a visitor follows an enquiry link from the Services page.
+* Added live feedback areas for form validation and submission responses.
+
+### Version 3.1 – SEO and technical improvements
+
+* Added unique title tags and meta descriptions to all six HTML pages.
+* Added relevant page-specific keyword metadata.
+* Added Open Graph metadata for social sharing previews.
+* Added descriptive alternative text and lazy loading to gallery images.
+* Added a skip-to-main-content link to each page.
+* Added `robots.txt` and `sitemap.xml` for crawler guidance and page discovery.
+* Added a Netlify `_headers` file with basic security and caching headers.
+* Added reduced-motion support for visitors who prefer less animation.
+* Added internal service-to-enquiry links with service preselection.
+* Added deployment instructions and a Part 3 testing checklist.
+
+### Version 3.2 – Deployment and final verification
+
+* Record the actual public deployment URL after publishing.
+* Replace the placeholder domain in `robots.txt` and `sitemap.xml`.
+* Test the published website and record any fixes made.
+* Update this changelog with the final deployment date and verification results.
+
+## 23.11 Part 3 references
+
+Google Search Central (n.d.) *SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+
+Google Search Central (n.d.) *Build and submit a sitemap*. Available at: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.) *HTML forms*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.) *Constraint validation*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.) *Document Object Model (DOM)*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.) *Using the Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (Accessed: 2 November 2026).
+
+Sitemaps.org (n.d.) *Sitemaps XML format*. Available at: https://www.sitemaps.org/protocol.html (Accessed: 2 November 2026).
+
+Netlify (n.d.) *Get started with Netlify*. Available at: https://docs.netlify.com/ (Accessed: 2 November 2026).
+
+
+### Business contact details updated
+
+The current contact information supplied for this project is:
+
+* Address: 92 De Korte Street, Braamfontein, Johannesburg, Gauteng, South Africa.
+* Telephone: +27 60 432 7719.
+* Email: nikelomoyo@gmail.com.
+
+The previous example Sandton location and example telephone number were removed from the public contact page and page footers. The Google Maps embed now searches for the supplied street address. Business opening hours and service prices still require confirmation before the website is published.
+
+
+### Part 3.3 – Mobile navigation refinement
+- Replaced the permanently expanded vertical mobile navigation with a compact header and accessible menu toggle.
+- Added open/close behaviour, Escape-key support, and automatic menu closing after selecting a page.
+- Reduced the mobile main-content offset to match the compact header.
+- Desktop navigation remains visible in its original horizontal layout.
+- Browser verification is still required on physical mobile devices and responsive browser sizes.

@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Alex the Barber provides professional haircuts, beard trimming, shaving and styling services.">
+    <meta name="description" content="Book professional haircuts, fades, beard trims and grooming services with Alex the Barber in Johannesburg. Explore services and make an appointment enquiry.">
 
-    <title>Alex the Barber | Home</title>
+    <title>Alex the Barber | Professional Haircuts in Johannesburg</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <meta name="keywords" content="barber Johannesburg, men's haircut Johannesburg, professional barber, fade haircut, beard trim">
+    <meta name="author" content="Alex the Barber">
+    <meta name="theme-color" content="#111111">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alex the Barber | Professional Haircuts in Johannesburg">
+    <meta property="og:description" content="Book professional haircuts, fades, beard trims and grooming services with Alex the Barber in Johannesburg. Explore services and make an appointment enquiry.">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="robots" content="index, follow">
+
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- ==HEADER ======-->
     <header class="site-header">
@@ -27,9 +37,13 @@
             </a>
 
             <!-- Navigation -->
-            <div class="nav-links">
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span><span></span><span></span>
+            </button>
 
-                <a href="index.html" class="active">Home</a>
+            <div class="nav-links" id="primary-navigation">
+
+                <a href="index.html" class="active" aria-current="page">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="gallery.html">Gallery</a>
@@ -44,7 +58,7 @@
 
 
     <!-- ===== MAIN CONTENT ==== -->
-    <main>
+    <main id="main-content">
 
         <!-- Hero Section -->
         <section class="hero">
@@ -419,8 +433,8 @@
 
                 <h3>Contact</h3>
 
-                <p>Email: info@alexthebarber.com</p>
-                <p>Phone: +27 12 345 6789</p>
+                <p>Email: nikelomoyo@gmail.com</p>
+                <p>Phone: <a href="tel:+27604327719">+27 60 432 7719</a></p>
                 <p>Johannesburg, South Africa</p>
 
             </div>
@@ -439,7 +453,7 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
 </body>
 

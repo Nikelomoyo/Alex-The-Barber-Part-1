@@ -6,16 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Contact Alex the Barber for appointments, enquiries, opening hours and locations.">
+    <meta name="description" content="Contact Alex the Barber at 92 De Korte Street, Braamfontein, Johannesburg, or send a general enquiry by email or phone.">
 
-    <title>Alex the Barber | Contact</title>
+    <title>Contact Alex the Barber | Braamfontein, Johannesburg</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+
+    <meta name="keywords" content="contact Alex the Barber, barber Braamfontein, barber Johannesburg">
+    <meta name="author" content="Alex the Barber">
+    <meta name="theme-color" content="#111111">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Alex the Barber | Braamfontein, Johannesburg">
+    <meta property="og:description" content="Contact Alex the Barber at 92 De Korte Street, Braamfontein, Johannesburg, or send a general enquiry by email or phone.">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="robots" content="index, follow">
 
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- =========HEADER === -->
     <header class="site-header">
@@ -29,14 +39,18 @@
 
             </a>
 
-            <div class="nav-links">
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="primary-navigation">
 
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="enquiry.html">Enquiry</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
 
             </div>
 
@@ -46,7 +60,7 @@
 
 
     <!-- ============MAIN ======== -->
-    <main>
+    <main id="main-content">
 
         <!-- Page Hero -->
         <section class="page-hero">
@@ -81,8 +95,8 @@
                 <h2>Visit Alex the Barber</h2>
 
                 <p>
-                    Choose the location that is most convenient
-                    for your next appointment.
+                    Visit us at our Braamfontein location or contact us
+                    to enquire about an appointment.
                 </p>
 
             </div>
@@ -97,52 +111,23 @@
                         LOCATION 01
                     </span>
 
-                    <h3>Johannesburg</h3>
+                    <h3>Braamfontein</h3>
 
                     <p>
-                        123 Main Street<br>
+                        92 De Korte Street<br>
                         Braamfontein<br>
                         Johannesburg<br>
-                        Gauteng
+                        Gauteng, South Africa
                     </p>
 
                     <p>
                         <strong>Phone:</strong>
-                        +27 12 345 6789
+                        <a href="tel:+27604327719">+27 60 432 7719</a>
                     </p>
 
                     <p>
                         <strong>Email:</strong>
-                        info@alexthebarber.com
-                    </p>
-
-                </article>
-
-
-                <!-- Location 2 -->
-                <article class="location-card">
-
-                    <span class="location-label">
-                        LOCATION 02
-                    </span>
-
-                    <h3>Sandton</h3>
-
-                    <p>
-                        45 Rivonia Road<br>
-                        Sandton<br>
-                        Johannesburg<br>
-                        Gauteng
-                    </p>
-
-                    <p>
-                        <strong>Phone:</strong>
-                        +27 11 456 7890
-                    </p>
-
-                    <p>
-                        <strong>Email:</strong>
-                        info@alexthebarber.com
+                        <a href="mailto:nikelomoyo@gmail.com">nikelomoyo@gmail.com</a>
                     </p>
 
                 </article>
@@ -188,7 +173,7 @@
                     OUR LOCATION
                 </span>
 
-                <h2>Find Us in Johannesburg</h2>
+                <h2>Find Us in Braamfontein</h2>
 
             </div>
 
@@ -196,7 +181,7 @@
             <div class="map-container">
 
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14320.477138010203!2d28.027764751199587!3d-26.192797683334085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1974081ac5%3A0xd12a225dc667e805!2sBraamfontein%2C%20Johannesburg%2C%202017!5e0!3m2!1sen!2sza!4v1786629691032!5m2!1sen!2sza"
+                    src="https://www.google.com/maps?q=92%20De%20Korte%20Street%2C%20Braamfontein%2C%20Johannesburg%2C%20South%20Africa&output=embed"
                     title="Map showing Alex the Barber location"
                     loading="lazy"
                     allowfullscreen>
@@ -206,6 +191,58 @@
 
         </section>
 
+
+
+
+        <!-- General Contact Message -->
+        <section class="contact-form-section section-container">
+            <div class="section-heading">
+                <span class="section-label">GENERAL ENQUIRIES</span>
+                <h2>Send Us a Message</h2>
+                <p>Use this form for general questions, feedback or other messages. Appointment requests can be made on the Enquiry page.</p>
+            </div>
+            <div class="form-container contact-message-container">
+                <form id="contactForm" class="contact-form" action="mailto:nikelomoyo@gmail.com" method="post" enctype="text/plain" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="name" required minlength="2" maxlength="70" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" required maxlength="120" autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number (optional)</label>
+                            <input type="tel" id="contactPhone" name="phone" pattern="[0-9+() -]{7,20}" maxlength="20" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageType">Type of Message</label>
+                            <select id="messageType" name="message_type" required>
+                                <option value="">Select message type</option>
+                                <option>General question</option>
+                                <option>Feedback</option>
+                                <option>Business enquiry</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="subject" required minlength="3" maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" name="message" rows="6" required minlength="10" maxlength="1500" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div id="contactFeedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+                    <button type="submit" class="btn btn-primary form-button">Prepare Email</button>
+                    <p class="form-note">This form opens your default email application with your message prepared. It does not send the email automatically.</p>
+                </form>
+            </div>
+        </section>
 
         <!-- Contact CTA -->
         <section class="cta section-container">
@@ -272,8 +309,8 @@
 
                 <h3>Contact</h3>
 
-                <p>Email: info@alexthebarber.com</p>
-                <p>Phone: +27 12 345 6789</p>
+                <p>Email: nikelomoyo@gmail.com</p>
+                <p>Phone: <a href="tel:+27604327719">+27 60 432 7719</a></p>
                 <p>Johannesburg, South Africa</p>
 
             </div>
@@ -292,7 +329,7 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
 </body>
 
