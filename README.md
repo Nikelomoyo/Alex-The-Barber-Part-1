@@ -1142,3 +1142,8 @@ The previous example Sandton location and example telephone number were removed 
 - Reduced the mobile main-content offset to match the compact header.
 - Desktop navigation remains visible in its original horizontal layout.
 - Browser verification is still required on physical mobile devices and responsive browser sizes.
+
+
+### Netlify Forms configuration
+
+The `service-enquiry` and `general-contact` forms are configured for Netlify Forms and submitted with URL-encoded AJAX requests. In the Netlify dashboard, enable form detection and deploy this updated site. Then open Forms to confirm both forms are detected. Configure an email notification for each form to `nikelomoyo@gmail.com`; submissions are stored by Netlify, but email notifications must be enabled separately.

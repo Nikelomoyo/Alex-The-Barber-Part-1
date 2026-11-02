@@ -19,7 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact Alex the Barber | Braamfontein, Johannesburg">
     <meta property="og:description" content="Contact Alex the Barber at 92 De Korte Street, Braamfontein, Johannesburg, or send a general enquiry by email or phone.">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:image" content="/images/logo.png">
     <meta name="robots" content="index, follow">
 
 </head>
@@ -34,7 +34,7 @@
 
             <a href="index.html" class="logo-link">
 
-                <img src="images/logo.png"
+                <img src="/images/logo.png"
                      alt="Alex the Barber logo">
 
             </a>
@@ -202,7 +202,9 @@
                 <p>Use this form for general questions, feedback or other messages. Appointment requests can be made on the Enquiry page.</p>
             </div>
             <div class="form-container contact-message-container">
-                <form id="contactForm" class="contact-form" action="mailto:nikelomoyo@gmail.com" method="post" enctype="text/plain" novalidate>
+                <form id="contactForm" class="contact-form" name="general-contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+                    <input type="hidden" name="form-name" value="general-contact">
+                    <p class="hidden" hidden><label>Do not fill this out: <input name="bot-field"></label></p>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="contactName">Full Name</label>
@@ -238,8 +240,8 @@
                         <textarea id="contactMessage" name="message" rows="6" required minlength="10" maxlength="1500" placeholder="Write your message here..."></textarea>
                     </div>
                     <div id="contactFeedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
-                    <button type="submit" class="btn btn-primary form-button">Prepare Email</button>
-                    <p class="form-note">This form opens your default email application with your message prepared. It does not send the email automatically.</p>
+                    <button type="submit" class="btn btn-primary form-button">Send Message</button>
+                    <p class="form-note">Your message will be submitted securely through this website. For direct email, contact nikelomoyo@gmail.com.</p>
                 </form>
             </div>
         </section>
@@ -280,7 +282,7 @@
 
             <div class="footer-brand">
 
-                <img src="images/logo.png"
+                <img src="/images/logo.png"
                      alt="Alex the Barber logo">
 
                 <p>

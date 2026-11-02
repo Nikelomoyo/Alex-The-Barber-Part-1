@@ -19,7 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Book a Barber Appointment | Alex the Barber Johannesburg">
     <meta property="og:description" content="Send an appointment enquiry to Alex the Barber. Choose a grooming service, preferred date and time, and view an estimated service price.">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:image" content="/images/logo.png">
     <meta name="robots" content="index, follow">
 
 </head>
@@ -34,7 +34,7 @@
 
             <a href="index.html" class="logo-link">
 
-                <img src="images/logo.png"
+                <img src="/images/logo.png"
                      alt="Alex the Barber logo">
 
             </a>
@@ -105,7 +105,9 @@
                     </p>
 
 
-                    <form class="enquiry-form" id="enquiryForm" action="enquiry.html#enquiryFeedback" method="get" novalidate>
+                    <form class="enquiry-form" id="enquiryForm" name="service-enquiry" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+                        <input type="hidden" name="form-name" value="service-enquiry">
+                        <p class="hidden" hidden><label>Do not fill this out: <input name="bot-field"></label></p>
 
                         <div class="form-row">
 
@@ -416,7 +418,7 @@
 
             <div class="footer-brand">
 
-                <img src="images/logo.png"
+                <img src="/images/logo.png"
                      alt="Alex the Barber logo">
 
                 <p>
